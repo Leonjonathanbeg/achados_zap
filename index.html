@@ -532,6 +532,68 @@ footer {
   .nav li:not(:last-child) { display: none; }
   .hero-trust { gap: 20px; }
 }
+
+/* ════ BANNER WHATSAPP ════ */
+.wa-banner {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0d1f0d 100%);
+  border-bottom: 1px solid rgba(37,211,102,.2);
+  padding: 14px 24px;
+}
+.wa-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.wa-icon { flex-shrink: 0; display: flex; align-items: center; }
+.wa-text { flex: 1; min-width: 200px; }
+.wa-label {
+  font-size: .68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #25D366;
+  margin-bottom: 2px;
+}
+.wa-name {
+  font-family: 'Fraunces', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 2px;
+  line-height: 1.3;
+}
+.wa-desc {
+  font-size: .78rem;
+  color: rgba(255,255,255,.45);
+}
+.wa-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #25D366;
+  color: #fff;
+  font-weight: 700;
+  font-size: .88rem;
+  padding: 10px 22px;
+  border-radius: 8px;
+  white-space: nowrap;
+  transition: all .2s;
+  box-shadow: 0 4px 16px rgba(37,211,102,.35);
+  flex-shrink: 0;
+}
+.wa-btn:hover {
+  background: #1db954;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(37,211,102,.45);
+}
+@media (max-width: 600px) {
+  .wa-inner { gap: 12px; }
+  .wa-btn   { width: 100%; justify-content: center; }
+}
+
 </style>
 <body>
 
@@ -569,6 +631,28 @@ footer {
   </div>
 </section>
 
+
+<!-- ════ BANNER CANAL WHATSAPP ════ -->
+<div class="wa-banner">
+  <div class="wa-inner">
+    <div class="wa-icon">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="16" cy="16" r="16" fill="#25D366"/>
+        <path d="M22.5 9.5C20.8 7.8 18.5 6.9 16 6.9c-5.1 0-9.1 4.1-9.1 9.1 0 1.6.4 3.1 1.2 4.5L6.8 25.1l4.7-1.2c1.3.7 2.8 1.1 4.3 1.1h.1c5.1 0 9.1-4.1 9.1-9.1-.1-2.4-1-4.7-2.5-6.4zm-6.5 14c-1.4 0-2.7-.4-3.9-1l-.3-.2-2.8.7.8-2.7-.2-.3c-.8-1.2-1.2-2.6-1.2-4 0-4.2 3.4-7.6 7.6-7.6 2 0 3.9.8 5.3 2.2 1.4 1.4 2.2 3.3 2.2 5.3.1 4.2-3.3 7.6-7.5 7.6zm4.1-5.7c-.2-.1-1.3-.6-1.5-.7-.2-.1-.3-.1-.5.1-.1.2-.5.7-.6.8-.1.1-.2.1-.4 0-.2-.1-.9-.3-1.7-1.1-.6-.6-1-1.3-1.2-1.5-.1-.2 0-.3.1-.4l.3-.3c.1-.1.1-.2.2-.3.1-.1 0-.2 0-.3 0-.1-.5-1.2-.7-1.6-.2-.4-.3-.3-.5-.3h-.4c-.1 0-.4.1-.6.3-.2.2-.8.8-.8 1.9 0 1.1.8 2.2.9 2.3.1.1 1.6 2.5 3.9 3.4.5.2 1 .4 1.3.5.5.2 1 .1 1.4.1.4-.1 1.3-.5 1.5-1s.2-.9.1-1c-.1-.1-.2-.2-.4-.3z" fill="white"/>
+      </svg>
+    </div>
+    <div class="wa-text">
+      <div class="wa-label">📣 Siga nosso canal no WhatsApp</div>
+      <div class="wa-name">🛒 ⚡️ ZAP ⚡️ 🛒 — Ofertas Relâmpago ⚡️</div>
+      <div class="wa-desc">Receba as melhores ofertas direto no seu WhatsApp, antes de todo mundo.</div>
+    </div>
+    <a href="https://whatsapp.com/channel/0029VbBoXBWCnA7mhVKpm83w" target="_blank" rel="nofollow" class="wa-btn" aria-label="Seguir canal no WhatsApp">
+      Seguir Canal →
+    </a>
+  </div>
+</div>
+<!-- ════ FIM BANNER WHATSAPP ════ -->
+
 <!-- ════ BARRA DE CATEGORIAS ════ -->
 <div class="cat-bar" id="categorias">
   <button class="cat-tab active" onclick="filterCat('all', this)">
@@ -595,8 +679,8 @@ footer {
 <section class="prod-sec" id="produtos">
   <div class="sec-hdr">
     <div class="sec-label">Recomendações Verificadas</div>
-    <h2 class="sec-title">Produtos em Breve</h2>
-    <p class="sec-sub">Nossa equipe está finalizando a seleção. Em breve você encontrará aqui os melhores produtos avaliados com critério e honestidade.</p>
+    <h2 class="sec-title">Produtos Recomendados</h2>
+    <p class="sec-sub">Cada produto é avaliado com critério antes de entrar nesta lista. Clique para ver detalhes, preço e disponibilidade.</p>
   </div>
 
   <div class="prod-grid" id="grid">
@@ -604,11 +688,7 @@ footer {
     <!-- ════════════════════════════════════════════
          ESTADO VAZIO — aparece enquanto não há produtos
     ════════════════════════════════════════════ -->
-    <div class="empty-state">
-      <div class="empty-icon">📦</div>
-      <h3>Nenhum produto ainda</h3>
-      <p>Nossa equipe está preparando as primeiras recomendações. Volte em breve ou entre em contato para saber quando os produtos serão adicionados.</p>
-    </div>
+
 
 
     <!--
@@ -621,11 +701,6 @@ footer {
     -->
 
     
-    <div class="empty-state">
-      <div class="empty-icon">📦</div>
-      <h3>Nenhum produto ainda</h3>
-      <p>Nossa equipe está preparando as primeiras recomendações. Volte em breve ou entre em contato para saber quando os produtos serão adicionados.</p>
-    </div>
 
     <!-- ════════════════════════════════════════════
     TEMPLATE DE CARD — COPIE E COLE PARA ADICIONAR PRODUTOS
@@ -642,6 +717,65 @@ footer {
       
 
     </div><!-- /prod-grid -->
+
+    <!-- ════ PRODUTO: Samsung Galaxy S23 ════ -->
+    <div class="card reveal" data-cat="gadgets">
+      <div class="c-badge b-hot">🔥 Oferta Relâmpago</div>
+      <div class="c-img" style="background:linear-gradient(135deg,#0a0a0a 0%,#1a1a2e 100%);display:flex;align-items:center;justify-content:center;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI2MCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIyNjAiIHkyPSIyMDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBhMGEwYSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxYTFhMmUiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InBob25lIiB4MT0iODAiIHkxPSIxMCIgeDI9IjE4MCIgeTI9IjE5MCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMmEyYTJhIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMTExMTExIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhMWExYSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic2NyZWVuIiB4MT0iODgiIHkxPSIyMiIgeDI9IjE3MiIgeTI9IjE3OCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEyMzdlIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iNDAlIiBzdG9wLWNvbG9yPSIjMGQxYjZlIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBhMGExYSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic2hpbmUiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjA4Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPHJhZGlhbEdyYWRpZW50IGlkPSJnbG93IiBjeD0iMTMwIiBjeT0iMTAwIiByPSI3MCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjM2Y1MWI1IiBzdG9wLW9wYWNpdHk9IjAuMyIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzZjUxYjUiIHN0b3Atb3BhY2l0eT0iMCIvPgogICAgPC9yYWRpYWxHcmFkaWVudD4KICAgIDxmaWx0ZXIgaWQ9InNoYWRvdyI+CiAgICAgIDxmZURyb3BTaGFkb3cgZHg9IjAiIGR5PSI4IiBzdGREZXZpYXRpb249IjEyIiBmbG9vZC1jb2xvcj0iIzAwMDAwMCIgZmxvb2Qtb3BhY2l0eT0iMC42Ii8+CiAgICA8L2ZpbHRlcj4KICAgIDxjbGlwUGF0aCBpZD0icGhvbmVDbGlwIj4KICAgICAgPHJlY3QgeD0iODIiIHk9IjgiIHdpZHRoPSI5NiIgaGVpZ2h0PSIxODQiIHJ4PSIxNiIvPgogICAgPC9jbGlwUGF0aD4KICA8L2RlZnM+CgogIDwhLS0gQmFja2dyb3VuZCAtLT4KICA8cmVjdCB3aWR0aD0iMjYwIiBoZWlnaHQ9IjIwMCIgZmlsbD0idXJsKCNiZykiLz4KICA8IS0tIEFtYmllbnQgZ2xvdyAtLT4KICA8ZWxsaXBzZSBjeD0iMTMwIiBjeT0iMTAwIiByeD0iODAiIHJ5PSI2MCIgZmlsbD0idXJsKCNnbG93KSIvPgoKICA8IS0tIFBob25lIGJvZHkgc2hhZG93IC0tPgogIDxyZWN0IHg9IjgyIiB5PSI4IiB3aWR0aD0iOTYiIGhlaWdodD0iMTg0IiByeD0iMTYiIGZpbGw9IiMwMDAiIG9wYWNpdHk9IjAuNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNCw2KSIgZmlsdGVyPSJ1cmwoI3NoYWRvdykiLz4KCiAgPCEtLSBQaG9uZSBib2R5IC0tPgogIDxyZWN0IHg9IjgyIiB5PSI4IiB3aWR0aD0iOTYiIGhlaWdodD0iMTg0IiByeD0iMTYiIGZpbGw9InVybCgjcGhvbmUpIi8+CgogIDwhLS0gU2NyZWVuIC0tPgogIDxyZWN0IHg9Ijg4IiB5PSIyMiIgd2lkdGg9Ijg0IiBoZWlnaHQ9IjE1NiIgcng9IjEwIiBmaWxsPSJ1cmwoI3NjcmVlbikiLz4KCiAgPCEtLSBTY3JlZW4gc2hpbmUgLS0+CiAgPHJlY3QgeD0iODgiIHk9IjIyIiB3aWR0aD0iODQiIGhlaWdodD0iMTU2IiByeD0iMTAiIGZpbGw9InVybCgjc2hpbmUpIi8+CgogIDwhLS0gUHVuY2gtaG9sZSBjYW1lcmEgLS0+CiAgPGNpcmNsZSBjeD0iMTMwIiBjeT0iMzYiIHI9IjQuNSIgZmlsbD0iIzAwMDAwMCIgb3BhY2l0eT0iMC44NSIvPgogIDxjaXJjbGUgY3g9IjEzMCIgY3k9IjM2IiByPSIyLjUiIGZpbGw9IiMwZDBkMWEiLz4KCiAgPCEtLSBTdGF0dXMgYmFyIGRvdHMgLS0+CiAgPGNpcmNsZSBjeD0iMTAwIiBjeT0iMzYiIHI9IjEuNSIgZmlsbD0iI2ZmZmZmZiIgb3BhY2l0eT0iMC4zIi8+CiAgPHJlY3QgeD0iMTUyIiB5PSIzNCIgd2lkdGg9IjE0IiBoZWlnaHQ9IjQiIHJ4PSIyIiBmaWxsPSIjZmZmZmZmIiBvcGFjaXR5PSIwLjI1Ii8+CgogIDwhLS0gV2FsbHBhcGVyIGRlc2lnbiBvbiBzY3JlZW4g4oCUIGFic3RyYWN0IFNhbXN1bmctbGlrZSAtLT4KICA8ZWxsaXBzZSBjeD0iMTEwIiBjeT0iOTAiIHJ4PSIzMCIgcnk9IjMwIiBmaWxsPSIjMTU2NWMwIiBvcGFjaXR5PSIwLjQiLz4KICA8ZWxsaXBzZSBjeD0iMTUwIiBjeT0iMTEwIiByeD0iMjUiIHJ5PSIyNSIgZmlsbD0iIzI4MzU5MyIgb3BhY2l0eT0iMC4zNSIvPgogIDxlbGxpcHNlIGN4PSIxMjUiIGN5PSIxMzAiIHJ4PSIyMCIgcnk9IjIwIiBmaWxsPSIjMGQ0N2ExIiBvcGFjaXR5PSIwLjMiLz4KCiAgPCEtLSBTYW1zdW5nIGxvZ28gb24gc2NyZWVuIC0tPgogIDx0ZXh0IHg9IjEzMCIgeT0iODUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjZmZmZmZmIiBvcGFjaXR5PSIwLjkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIxIj5TQU1TVU5HPC90ZXh0PgoKICA8IS0tIFNtYWxsIGljb25zIG9uIHNjcmVlbiAtLT4KICA8cmVjdCB4PSIxMDIiIHk9IjE0OCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIiByeD0iMyIgZmlsbD0iI2ZmZmZmZiIgb3BhY2l0eT0iMC4wOCIvPgogIDxyZWN0IHg9IjExOCIgeT0iMTQ4IiB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHJ4PSIzIiBmaWxsPSIjZmZmZmZmIiBvcGFjaXR5PSIwLjA4Ii8+CiAgPHJlY3QgeD0iMTM0IiB5PSIxNDgiIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgcng9IjMiIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9IjAuMDgiLz4KICA8cmVjdCB4PSIxNTAiIHk9IjE0OCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIiByeD0iMyIgZmlsbD0iI2ZmZmZmZiIgb3BhY2l0eT0iMC4wOCIvPgoKICA8IS0tIEhvbWUgaW5kaWNhdG9yIC0tPgogIDxyZWN0IHg9IjExNiIgeT0iMTY4IiB3aWR0aD0iMjgiIGhlaWdodD0iMyIgcng9IjIiIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9IjAuMzUiLz4KCiAgPCEtLSBTaWRlIGJ1dHRvbnMgKHJpZ2h0KSAtLT4KICA8cmVjdCB4PSIxNzgiIHk9IjU1IiB3aWR0aD0iNCIgaGVpZ2h0PSIyOCIgcng9IjIiIGZpbGw9IiMxYTFhMWEiLz4KICA8cmVjdCB4PSIxNzgiIHk9IjkwIiB3aWR0aD0iNCIgaGVpZ2h0PSIxOCIgcng9IjIiIGZpbGw9IiMxYTFhMWEiLz4KCiAgPCEtLSBTaWRlIGJ1dHRvbnMgKGxlZnQpIC0tPgogIDxyZWN0IHg9Ijc4IiB5PSI2MCIgd2lkdGg9IjQiIGhlaWdodD0iMjAiIHJ4PSIyIiBmaWxsPSIjMWExYTFhIi8+CiAgPHJlY3QgeD0iNzgiIHk9Ijg1IiB3aWR0aD0iNCIgaGVpZ2h0PSIyMCIgcng9IjIiIGZpbGw9IiMxYTFhMWEiLz4KCiAgPCEtLSBSZWFyIGNhbWVyYSBidW1wICh2aXNpYmxlIGZyb20gZnJvbnQtaXNoIGFuZ2xlKSAtLT4KICA8cmVjdCB4PSIxNTIiIHk9IjEyIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHJ4PSI1IiBmaWxsPSIjMGQwZDBkIiBvcGFjaXR5PSIwLjYiLz4KICA8Y2lyY2xlIGN4PSIxNTgiIGN5PSIxOCIgcj0iNCIgZmlsbD0iIzExMSIgc3Ryb2tlPSIjMzMzIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8Y2lyY2xlIGN4PSIxNjYiIGN5PSIxOCIgcj0iMy41IiBmaWxsPSIjMTExIiBzdHJva2U9IiMzMzMiIHN0cm9rZS13aWR0aD0iMSIvPgogIDxjaXJjbGUgY3g9IjE2MiIgY3k9IjI2IiByPSIzIiBmaWxsPSIjMTExIiBzdHJva2U9IiMzMzMiIHN0cm9rZS13aWR0aD0iMSIvPgoKICA8IS0tIDVHIGJhZGdlIC0tPgogIDxyZWN0IHg9IjEwIiB5PSIxNTUiIHdpZHRoPSI0NiIgaGVpZ2h0PSIyMCIgcng9IjYiIGZpbGw9IiMxOTc2ZDIiIG9wYWNpdHk9IjAuOSIvPgogIDx0ZXh0IHg9IjMzIiB5PSIxNjkiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjaywgQXJpYWwiIGZvbnQtc2l6ZT0iOSIgZm9udC13ZWlnaHQ9IjkwMCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+NUc8L3RleHQ+CgogIDwhLS0gMjU2R0IgYmFkZ2UgLS0+CiAgPHJlY3QgeD0iMTAiIHk9IjEzMCIgd2lkdGg9IjUyIiBoZWlnaHQ9IjIwIiByeD0iNiIgZmlsbD0iIzMzMyIgb3BhY2l0eT0iMC45Ii8+CiAgPHRleHQgeD0iMzYiIHk9IjE0NCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjgiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPjI1NiBHQjwvdGV4dD4KCiAgPCEtLSBHYWxheHkgUzIzIGxhYmVsIC0tPgogIDx0ZXh0IHg9IjEzMCIgeT0iMTk3IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iOCIgZmlsbD0iI2ZmZmZmZiIgb3BhY2l0eT0iMC4zNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjAuNSI+R2FsYXh5IFMyMzwvdGV4dD4KPC9zdmc+"
+             alt="Samsung Galaxy S23 256GB 5G Preto"
+             width="260" height="200"
+             style="object-fit:contain;">
+      </div>
+      <div class="c-body">
+        <div class="c-cat">Gadgets · Smartphone 5G</div>
+        <div class="c-name">Samsung Galaxy S23 256 GB · 5G · Preto</div>
+        <div class="c-desc">
+          O Galaxy S23 chegou com câmera tripla aprimorada, processador Snapdragon de ponta
+          e conectividade 5G. Tela Dynamic AMOLED 2X de 6,1" com 120Hz e bateria otimizada
+          por IA. Disponível por tempo limitado no Mercado Livre.
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:16px;">
+          <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:8px 10px;">
+            <div style="color:var(--muted);font-size:.65rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:2px;">RAM</div>
+            <div style="font-weight:700;color:var(--ink);font-size:.82rem;">8 GB</div>
+          </div>
+          <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:8px 10px;">
+            <div style="color:var(--muted);font-size:.65rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:2px;">Armazenamento</div>
+            <div style="font-weight:700;color:var(--ink);font-size:.82rem;">256 GB</div>
+          </div>
+          <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:8px 10px;">
+            <div style="color:var(--muted);font-size:.65rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:2px;">Rede</div>
+            <div style="font-weight:700;color:var(--ink);font-size:.82rem;">5G</div>
+          </div>
+          <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:8px 10px;">
+            <div style="color:var(--muted);font-size:.65rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:2px;">Câmera</div>
+            <div style="font-weight:700;color:var(--ink);font-size:.82rem;">Tripla 50MP</div>
+          </div>
+        </div>
+        <div class="c-rating">
+          <span class="stars">★★★★★</span>
+          <span class="r-score">4.9</span>
+          <span class="r-count">(Mercado Livre)</span>
+        </div>
+        <div class="urgency">
+          <i class="fas fa-bolt"></i> Estoque limitado — confira disponibilidade
+        </div>
+        <a href="https://meli.la/2xtHG4B"
+           target="_blank"
+           rel="nofollow sponsored"
+           class="btn-buy"
+           style="background:linear-gradient(135deg,#1565c0 0%,#1976d2 100%);color:#fff;box-shadow:0 4px 18px rgba(21,101,192,.4);"
+           onclick="track('samsung-galaxy-s23')">
+          <i class="fas fa-tag"></i>
+          <span>Ver preço e disponibilidade
+            <small>Você será redirecionado ao Mercado Livre</small>
+          </span>
+        </a>
+      </div>
+    </div>
+    <!-- ════ FIM: Samsung Galaxy S23 ════ -->
+
   </div><!-- /prod-grid outer -->
 
   <!-- Mensagem de filtro vazio -->
@@ -750,7 +884,7 @@ footer {
       <div class="f-col" id="contato">
         <h4>Contato</h4>
         <ul>
-          <li><a href="mailto:contato@achadoszap.com">contato@achadoszap.com</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#89eae6e7fde8fde6c9e8eae1e8ede6faf3e8f9a7eae6e4"><span class="__cf_email__" data-cfemail="5f3c30312b3e2b301f3e3c373e3b302c253e2f713c3032">[email&#160;protected]</span></a></li>
           <li><a href="#" aria-label="Instagram">Instagram</a></li>
           <li><a href="#" aria-label="YouTube">YouTube</a></li>
         </ul>
@@ -772,7 +906,7 @@ footer {
 </footer>
 
 <!-- ════ JAVASCRIPT ════ -->
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 /* ── Smooth scroll ── */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
@@ -830,7 +964,7 @@ function filterCat(cat, btn) {
 }
 
 /* ── Tracking de cliques (para Google Analytics) ──
-   Chame track('id-do-produto') no onclick do botão de cada card
+   Chame onclick do botão de cada card
 ── */
 function track(productId) {
   if (typeof gtag !== 'undefined') {
